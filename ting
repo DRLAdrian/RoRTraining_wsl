@@ -1,0 +1,21 @@
+[1mdiff --git a/db/schema.rb b/db/schema.rb[m
+[1mindex 59cac2a..f380c86 100644[m
+[1m--- a/db/schema.rb[m
+[1m+++ b/db/schema.rb[m
+[36m@@ -10,7 +10,7 @@[m
+ #[m
+ # It's strongly recommended that you check this file into your version control system.[m
+ [m
+[31m-ActiveRecord::Schema.define(version: 20210423062729) do[m
+[32m+[m[32mActiveRecord::Schema.define(version: 20210427025802) do[m
+ [m
+   create_table "carts", force: :cascade do |t|[m
+     t.datetime "created_at", null: false[m
+[36m@@ -22,6 +22,7 @@[m [mActiveRecord::Schema.define(version: 20210423062729) do[m
+     t.integer "cart_id"[m
+     t.datetime "created_at", null: false[m
+     t.datetime "updated_at", null: false[m
+[32m+[m[32m    t.integer "quantity", default: 1[m
+     t.index ["cart_id"], name: "index_line_items_on_cart_id"[m
+     t.index ["product_id"], name: "index_line_items_on_product_id"[m
+   end[m
