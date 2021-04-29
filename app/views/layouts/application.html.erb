@@ -18,7 +18,7 @@
         </p>
         <div id="cart">
           <% if @cart %>
-            <%= render @cart %>
+            <%= render_if @cart && @cart.line_items.any?, @cart %>
           </div>
         <% end %>
         <ul>
