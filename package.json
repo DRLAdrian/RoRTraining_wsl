@@ -1,5 +1,20 @@
 {
   "name": "depot",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "babel-preset-react": "^6.24.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack-serve": "^4.0.0"
+  },
+  "devDependencies": {
+    "2": "^3.0.0",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "scripts": {
+    "startdev": "webpack serve --mode development --env development --hot --port 3000"
+  }
 }

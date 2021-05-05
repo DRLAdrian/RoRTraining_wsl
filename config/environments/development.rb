@@ -56,4 +56,18 @@ Rails.application.configure do
   # Disable channel security to allow access from the local jost when running development in multiple machines
   config.action_cable.disable_request_forgery_protection = true
 
+  # Gmail Config
+  # config.action_mailer.smtp_settings = {
+  #   address: "smtp.gmail.com",
+  #   port: 587,
+  #   domain: "domain.of.sender.net",
+  #   authentication: "plain",
+  #   user_name: "dave",
+  #   password: "secret",
+  #   enable_starttls_auto: true
+  #   }
+
+  Depot::Application.configure do
+    config.action_mailer.delivery_method = :test
+    end
 end
